@@ -7,7 +7,7 @@ using VRC.Udon;
 public class SpawnPlatform : UdonSharpBehaviour
 {
     [SerializeField]
-    private GameObject _platformPrefab; //Prefab of a platform.
+    private CubesPool _cubesPool; //Pool of platform cubes.
     [SerializeField]
     private float _spawnOffset = 1f; //Offset to spawn the platform.
     private bool _hasSpawned = false; //Has the next platform spawned?
@@ -20,7 +20,8 @@ public class SpawnPlatform : UdonSharpBehaviour
         float randZ = Random.Range(transform.position.z, transform.position.z + _spawnOffset);
 
         Vector3 spawnPosition = new Vector3(randX, randY, randZ);
-        GameObject nextPlatform = (GameObject)Instantiate(_platformPrefab, spawnPosition, Quaternion.identity);
+        _cubesPool.ActivateCube(spawnPosition);
+        //(GameObject)Instantiate(_platformPrefab, spawnPosition, Quaternion.identity);
 
         _hasSpawned = true;
     }
