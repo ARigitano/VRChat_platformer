@@ -9,36 +9,17 @@ public class CubesPool : UdonSharpBehaviour
 {
     [SerializeField]
     private GameObject[] _cubes; //Pool of platform cubes.
-    private int _activeCubeIndex; //Index of last cube active.
+    private int _indexToActivate = 0;
 
-    //Activate a cube and deactive first cube if too many cubes.
     public void ActivateCube(Vector3 spawnPosition)
     {
-        foreach(GameObject cube in _cubes)
+        if (_indexToActivate >= _cubes.Length)
         {
-            if(!cube.activeInHierarchy)
-            {
-                cube.SetActive(true);
-                cube.transform.position = spawnPosition;
-                _activeCubeIndex = Array.IndexOf(_cubes, cube);
-
-                if(_activeCubeIndex == _cubes.Length - 1)
-                {
-                    Debug.Log("ok");
-
-                    foreach (GameObject cube2 in _cubes)
-                    {
-                        if (cube2.activeInHierarchy)
-                        {
-                            cube2.SetActive(false);
-                            Debug.Log("ok2");
-                            break;
-                        }
-                    }
-                }
-
-                break;
-            }
+            _indexToActivate = 0;
         }
+
+        GameObject cube = _cubes[_indexToActivate];
+        cube.transform.position = spawnPosition;
+        _indexToActivate++;
     }
 }
