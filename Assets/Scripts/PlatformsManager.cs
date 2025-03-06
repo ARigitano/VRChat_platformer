@@ -12,26 +12,35 @@ public class PlatformsManager : UdonSharpBehaviour
     [SerializeField]
     private GameObject[] _cubes; //Platforms currently active in the scene.
 
-    private int _nbCubes = 1; //Number of platforms that are active in the scene.
+    private int _nbActiveCubes = 1; //Number of platforms that are active in the scene.
+    private int _nbTotalCubes = 0; // Total number of cubes that have spawned.
+    private String _firstPlayerName = ""; // Name of the player who is first in the race.
+
+    [SerializeField]
+    private HighscoreBoard _highscoreBoard; //Script reference for the highscore board.
 
     //Spawn a new platform.
-    public void SpawnCube(Vector3 spawnPosition)
+    public void SpawnCube(Vector3 spawnPosition, VRCPlayerApi firstPlayer)
     {
         GameObject cube = (GameObject)Instantiate(_cubePrefab, spawnPosition, Quaternion.identity);
         cube.GetComponent<SpawnPlatform>().platformsManager = this;
 
-        if(_nbCubes >= _cubes.Length)
+        if(_nbActiveCubes >= _cubes.Length)
         {
-            _nbCubes = 0;
+            _nbActiveCubes = 0;
         }
 
-        if(_cubes[_nbCubes] != null)
+        if(_cubes[_nbActiveCubes] != null)
         {
-            Destroy(_cubes[_nbCubes]);
+            Destroy(_cubes[_nbActiveCubes]);
         }
 
-        _cubes[_nbCubes] = cube;
-        _nbCubes++;
+        _cubes[_nbActiveCubes] = cube;
+        _nbActiveCubes++;
 
+        _firstPlayerName = firstPlayer.displayName;
+        _nbTotalCubes++;
+
+        _highscoreBoard.UpdateBoard(_firstPlayerName, _nbTotalCubes.ToString());
     }
 }
