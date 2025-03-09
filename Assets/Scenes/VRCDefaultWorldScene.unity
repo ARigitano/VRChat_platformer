@@ -246,7 +246,8 @@ MonoBehaviour:
   - {fileID: 2094555140}
   - {fileID: 0}
   - {fileID: 0}
-  _firstCubePosition: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   firstPlayerName: 
   _highscoreBoard: {fileID: 1313814643}
 --- !u!1 &214286785

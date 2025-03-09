@@ -11,8 +11,6 @@ public class PlatformsManager : UdonSharpBehaviour
     private GameObject _cubePrefab; //Prefab for a platform.
     [SerializeField]
     private GameObject[] _cubes; //Platforms currently active in the scene.
-    [SerializeField]
-    private Transform _firstCubePosition; //Position of the first platform.
 
     private int _nbActiveCubes = 1; //Number of platforms that are active in the scene.
     private int _nbTotalCubes = 0; // Total number of cubes that have spawned.
