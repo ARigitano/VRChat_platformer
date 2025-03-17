@@ -3,7 +3,6 @@ using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
-using System;
 
 public class PlatformsManager : UdonSharpBehaviour
 {
@@ -14,16 +13,65 @@ public class PlatformsManager : UdonSharpBehaviour
 
     private int _nbActiveCubes = 1; //Number of platforms that are active in the scene.
     private int _nbTotalCubes = 0; // Total number of cubes that have spawned.
-    public String firstPlayerName = ""; // Name of the player who is first in the race.
+    public System.String firstPlayerName = ""; // Name of the player who is first in the race.
 
     [SerializeField]
     private HighscoreBoard _highscoreBoard; //Script reference for the highscore board.
 
-    //Spawn a new platform.
-    public void SpawnCube(Vector3 spawnPosition, VRCPlayerApi firstPlayer)
+    [SerializeField]
+    private float _spawnOffset = 1f; //Offset to spawn the platform.
+
+    private float _timer = 3f;
+    private float _interval = 3f; // Time between each execution
+    private bool _isRunning = false;
+
+    private float randX;
+    private float randY;
+    private float randZ;
+
+    private void Start()
     {
+        randX = transform.position.x;
+        randY = transform.position.y;
+        randZ = transform.position.z;
+    }
+
+    public void StartCoroutineSimulation()
+    {
+        _isRunning = true;
+    }
+
+    private void Update()
+    {
+        if (_isRunning)
+        {
+            _timer -= Time.deltaTime;
+
+            if (_timer <= 0f)
+            {
+                ExecuteAfterDelay();
+                _timer = _interval;
+            }
+        }
+    }
+
+    private void ExecuteAfterDelay()
+    {
+        SpawnCube();
+        Debug.Log("spawned");
+    }
+
+    //Spawn a new platform.
+    public void SpawnCube()
+    {
+        randX += Random.Range(transform.position.x, transform.position.x + _spawnOffset);
+        randY += Random.Range(transform.position.y, transform.position.y + _spawnOffset);
+        randZ += Random.Range(transform.position.z, transform.position.z + _spawnOffset);
+
+        Vector3 spawnPosition = new Vector3(randX, randY, randZ);
+
         GameObject cube = (GameObject)Instantiate(_cubePrefab, spawnPosition, Quaternion.identity);
-        cube.GetComponent<SpawnPlatform>().platformsManager = this;
+        //cube.GetComponent<SpawnPlatform>().platformsManager = this;
 
         if(_nbActiveCubes >= _cubes.Length)
         {
@@ -38,7 +86,7 @@ public class PlatformsManager : UdonSharpBehaviour
         _cubes[_nbActiveCubes] = cube;
         _nbActiveCubes++;
 
-        firstPlayerName = firstPlayer.displayName;
+        //firstPlayerName = firstPlayer.displayName;
         _nbTotalCubes++;
 
         _highscoreBoard.UpdateBoard(firstPlayerName, _nbTotalCubes.ToString());

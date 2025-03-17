@@ -1,0 +1,529 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1521398425 &-5900073402083923720
+VideoBuildInfo:
+  m_VideoClipCount: 0
+  m_IsVideoModuleDisabled: 0
+--- !u!1126 &-646011958327016107
+PackedAssets:
+  m_ShortPath: CAB-8f43f2016ed69d58415907fb559b384c
+  m_Overhead: 4032
+  m_Contents:
+  - fileID: 1
+    classID: 142
+    packedSize: 104
+    offset: 4032
+    sourceAssetGUID: 00000000000000000000000000000000
+    buildTimeAssetPath: AssetBundle Object
+  - fileID: 2
+    classID: 290
+    packedSize: 120
+    offset: 4136
+    sourceAssetGUID: 00000000000000000000000000000000
+    buildTimeAssetPath: 'Built-in AssetBundleManifest: AssetBundleManifest'
+--- !u!668709126 &-328616889012067077
+BuiltAssetBundleInfoSet:
+  bundleInfos:
+  - bundleName: scene-standalonewindows64-vrcdefaultworldscene.vrcw
+    bundleArchiveFile: 2
+    packagedFileIndices: 0000000001000000
+  - bundleName: VRChat_platformer
+    bundleArchiveFile: 5
+    packagedFileIndices: 04000000
+--- !u!1125 &1
+BuildReport:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Build AssetBundles
+  m_Summary:
+    buildStartTime:
+      serializedVersion: 2
+      ticks: 638777773045738671
+    buildGUID: 00000000000000000000000000000000
+    platformName: Win64
+    platformGroupName: Standalone
+    subtarget: 0
+    options: 0
+    assetBundleOptions: 32
+    outputPath: C:/Users/Antoine/AppData/Local/Temp/DefaultCompany/VRChat_platformer
+    crc: 48813046
+    totalSize: 496665
+    totalTimeTicks: 63918183
+    totalErrors: 0
+    totalWarnings: 0
+    buildType: 2
+    buildResult: 1
+  m_Files:
+  - path: C:/MondesPerse/VRChat_platformer/scene-standalonewindows64-vrcdefaultworldscene.vrcw/BuildPlayer-VRCDefaultWorldScene
+    role: Scene
+    id: 0
+    totalSize: 208400
+  - path: C:/MondesPerse/VRChat_platformer/scene-standalonewindows64-vrcdefaultworldscene.vrcw/BuildPlayer-VRCDefaultWorldScene.sharedAssets
+    role: SharedAssets
+    id: 1
+    totalSize: 2379764
+  - path: C:/MondesPerse/VRChat_platformer/scene-standalonewindows64-vrcdefaultworldscene.vrcw
+    role: AssetBundle
+    id: 2
+    totalSize: 493139
+  - path: C:/MondesPerse/VRChat_platformer/scene-standalonewindows64-vrcdefaultworldscene.vrcw.manifest
+    role: AssetBundleTextManifest
+    id: 3
+    totalSize: 2289
+  - path: C:/MondesPerse/VRChat_platformer/VRChat_platformer/CAB-8f43f2016ed69d58415907fb559b384c
+    role: ResourcesFile
+    id: 4
+    totalSize: 4256
+  - path: C:/MondesPerse/VRChat_platformer/VRChat_platformer
+    role: ManifestAssetBundle
+    id: 5
+    totalSize: 1058
+  - path: C:/MondesPerse/VRChat_platformer/VRChat_platformer.manifest
+    role: AssetBundleTextManifest
+    id: 6
+    totalSize: 179
+  m_BuildSteps:
+  - stepName: Build Asset Bundles
+    durationTicks: 63918183
+    depth: 0
+    messages: []
+  - stepName: Calculate asset bundles to be built
+    durationTicks: 127121
+    depth: 1
+    messages: []
+  - stepName: Prebuild Cleanup and Recompile
+    durationTicks: 12148040
+    depth: 1
+    messages: []
+  - stepName: Compile scripts
+    durationTicks: 11286045
+    depth: 2
+    messages: []
+  - stepName: Generate and validate platform script types
+    durationTicks: 690551
+    depth: 2
+    messages: []
+  - stepName: Build Scene AssetBundle(s)
+    durationTicks: 33878337
+    depth: 1
+    messages: []
+  - stepName: 'Build bundle: scene-standalonewindows64-vrcdefaultworldscene.vrcw'
+    durationTicks: 31365755
+    depth: 2
+    messages: []
+  - stepName: Verify Build setup
+    durationTicks: 615158
+    depth: 3
+    messages: []
+  - stepName: Prepare assets for target platform
+    durationTicks: 728312
+    depth: 3
+    messages: []
+  - stepName: Prepare splash screen
+    durationTicks: 20366
+    depth: 3
+    messages:
+    - type: 3
+      content: Including Unity Splash Screen logo because 'Show Unity Logo' is enabled.
+  - stepName: Building scenes
+    durationTicks: 15742486
+    depth: 3
+    messages: []
+  - stepName: Building scene Assets/Scenes/VRCDefaultWorldScene.unity
+    durationTicks: 15742219
+    depth: 4
+    messages:
+    - type: 3
+      content: Computed code signatures for 62 scripts of type SerializedUdonProgramAsset
+        in 3ms
+  - stepName: Writing asset files
+    durationTicks: 977401
+    depth: 3
+    messages: []
+  - stepName: Packaging assets - archive:/BuildPlayer-VRCDefaultWorldScene/BuildPlayer-VRCDefaultWorldScene.sharedAssets
+    durationTicks: 947707
+    depth: 4
+    messages: []
+  - stepName: Creating compressed player package
+    durationTicks: 6118879
+    depth: 3
+    messages: []
+  - stepName: Postprocess built player
+    durationTicks: 623542
+    depth: 3
+    messages: []
+  m_Appendices:
+  - {fileID: -328616889012067077}
+  - {fileID: 5685136695154927368}
+  - {fileID: 7087345593484431073}
+  - {fileID: 279712594274631015}
+  - {fileID: -5900073402083923720}
+  - {fileID: -646011958327016107}
+--- !u!641289076 &279712594274631015
+AudioBuildInfo:
+  m_IsAudioDisabled: 0
+  m_AudioClipCount: 0
+  m_AudioMixerCount: 0
+--- !u!1126 &5685136695154927368
+PackedAssets:
+  m_ShortPath: BuildPlayer-VRCDefaultWorldScene.sharedAssets
+  m_Overhead: 109911
+  m_Contents:
+  - fileID: 1
+    classID: 150
+    packedSize: 73
+    offset: 110928
+    sourceAssetGUID: 00000000000000000000000000000000
+    buildTimeAssetPath: 
+  - fileID: 2
+    classID: 142
+    packedSize: 176
+    offset: 111008
+    sourceAssetGUID: 00000000000000000000000000000000
+    buildTimeAssetPath: 
+  - fileID: 3
+    classID: 21
+    packedSize: 1080
+    offset: 111184
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 4
+    classID: 21
+    packedSize: 912
+    offset: 112264
+    sourceAssetGUID: 05ba3efa3e1333e4abdfd42b423ed4fe
+    buildTimeAssetPath: Assets/Scenes/VRCDefaultWorldScene/GridFloor_udon.mat
+  - fileID: 5
+    classID: 21
+    packedSize: 696
+    offset: 113176
+    sourceAssetGUID: d082ac8649c65ab49b009037d0ca15b8
+    buildTimeAssetPath: Assets/Scenes/VRCDefaultWorldScene/SKY_UdonLab.mat
+  - fileID: 6
+    classID: 21
+    packedSize: 148
+    offset: 113872
+    sourceAssetGUID: e3265ab4bf004d28a9537516768c1c75
+    buildTimeAssetPath: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  - fileID: 7
+    classID: 21
+    packedSize: 2016
+    offset: 114024
+    sourceAssetGUID: 2e498d1c8094910479dc3e1b768306a4
+    buildTimeAssetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+      SDF - Fallback.asset
+  - fileID: 8
+    classID: 21
+    packedSize: 956
+    offset: 116040
+    sourceAssetGUID: 8f586378b4e144a9851e7b34d9b748ee
+    buildTimeAssetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+      SDF.asset
+  - fileID: 9
+    classID: 28
+    packedSize: 699196
+    offset: 117000
+    sourceAssetGUID: 79c2386005f95244da7ae1d0bec9cffa
+    buildTimeAssetPath: Assets/Scenes/VRCDefaultWorldScene/GridFloor_udon.png
+  - fileID: 10
+    classID: 28
+    packedSize: 128
+    offset: 816200
+    sourceAssetGUID: e3265ab4bf004d28a9537516768c1c75
+    buildTimeAssetPath: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  - fileID: 11
+    classID: 28
+    packedSize: 140
+    offset: 816328
+    sourceAssetGUID: 2e498d1c8094910479dc3e1b768306a4
+    buildTimeAssetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+      SDF - Fallback.asset
+  - fileID: 12
+    classID: 28
+    packedSize: 1048716
+    offset: 816472
+    sourceAssetGUID: 8f586378b4e144a9851e7b34d9b748ee
+    buildTimeAssetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+      SDF.asset
+  - fileID: 13
+    classID: 48
+    packedSize: 17324
+    offset: 1865192
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 14
+    classID: 48
+    packedSize: 75132
+    offset: 1882520
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 15
+    classID: 48
+    packedSize: 10256
+    offset: 1957656
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 16
+    classID: 48
+    packedSize: 11928
+    offset: 1967912
+    sourceAssetGUID: fe393ace9b354375a9cb14cdbbc28be4
+    buildTimeAssetPath: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+  - fileID: 17
+    classID: 115
+    packedSize: 96
+    offset: 109792
+    sourceAssetGUID: 4ecd63eff847044b68db9453ce219299
+    buildTimeAssetPath: Packages/com.vrchat.base/Runtime/VRCSDK/Plugins/VRCCore-Editor.dll
+  - fileID: 18
+    classID: 115
+    packedSize: 108
+    offset: 109888
+    sourceAssetGUID: 661092b4961be7145bfbe56e1e62337b
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Runtime/VRCSDK/Plugins/VRCSDK3.dll
+  - fileID: 19
+    classID: 115
+    packedSize: 92
+    offset: 110000
+    sourceAssetGUID: 0cd44c1031e13a943bb63640046fad76
+    buildTimeAssetPath: Packages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs
+  - fileID: 20
+    classID: 115
+    packedSize: 84
+    offset: 110096
+    sourceAssetGUID: 45115577ef41a5b4ca741ed302693907
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Runtime/Udon/UdonBehaviour.cs
+  - fileID: 21
+    classID: 115
+    packedSize: 124
+    offset: 110184
+    sourceAssetGUID: 4f231c4fb786f3946a6b90b886c48677
+    buildTimeAssetPath: Packages/com.unity.ugui/Runtime/EventSystem/InputModules/StandaloneInputModule.cs
+  - fileID: 22
+    classID: 115
+    packedSize: 96
+    offset: 110312
+    sourceAssetGUID: 71c1514a6bd24e1e882cebbe1904ce04
+    buildTimeAssetPath: Packages/com.unity.textmeshpro/Scripts/Runtime/TMP_FontAsset.cs
+  - fileID: 23
+    classID: 115
+    packedSize: 100
+    offset: 110408
+    sourceAssetGUID: 76c392e42b5098c458856cdf6ecaaaa1
+    buildTimeAssetPath: Packages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs
+  - fileID: 24
+    classID: 115
+    packedSize: 124
+    offset: 110512
+    sourceAssetGUID: bf61d954ecb803046953c666facfb904
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Runtime/Udon/ProgramSources/SerializedUdonProgramAsset.cs
+  - fileID: 25
+    classID: 115
+    packedSize: 100
+    offset: 110640
+    sourceAssetGUID: dc42784cf147c0c48a680349fa168899
+    buildTimeAssetPath: Packages/com.unity.ugui/Runtime/UI/Core/GraphicRaycaster.cs
+  - fileID: 26
+    classID: 115
+    packedSize: 96
+    offset: 110744
+    sourceAssetGUID: f4688fdb7df04437aeb418b961361dc5
+    buildTimeAssetPath: Packages/com.unity.textmeshpro/Scripts/Runtime/TextMeshProUGUI.cs
+  - fileID: 27
+    classID: 115
+    packedSize: 84
+    offset: 110840
+    sourceAssetGUID: fe87c0e1cc204ed48ad3b37840f39efc
+    buildTimeAssetPath: Packages/com.unity.ugui/Runtime/UI/Core/Image.cs
+  - fileID: 28
+    classID: 128
+    packedSize: 352462
+    offset: 1979840
+    sourceAssetGUID: e3265ab4bf004d28a9537516768c1c75
+    buildTimeAssetPath: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  - fileID: 29
+    classID: 1
+    packedSize: 75
+    offset: 2332304
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+  - fileID: 30
+    classID: 1
+    packedSize: 71
+    offset: 2332384
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+  - fileID: 31
+    classID: 4
+    packedSize: 68
+    offset: 2332456
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+  - fileID: 32
+    classID: 4
+    packedSize: 80
+    offset: 2332528
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+  - fileID: 33
+    classID: 23
+    packedSize: 156
+    offset: 2332608
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+  - fileID: 34
+    classID: 33
+    packedSize: 24
+    offset: 2332768
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+  - fileID: 35
+    classID: 33
+    packedSize: 24
+    offset: 2332792
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+  - fileID: 36
+    classID: 65
+    packedSize: 68
+    offset: 2332816
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+  - fileID: 37
+    classID: 65
+    packedSize: 68
+    offset: 2332888
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+  - fileID: 38
+    classID: 114
+    packedSize: 3644
+    offset: 2332960
+    sourceAssetGUID: 7da86b9185cb92d46a23e6a196c4b94e
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/09da51d7506b14a479e47690cac8b7c7.asset
+  - fileID: 39
+    classID: 114
+    packedSize: 2884
+    offset: 2336608
+    sourceAssetGUID: 52615d5a9bfba08498c75b7007436ab6
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/566cc00e27d5822449529a3785eae366.asset
+  - fileID: 40
+    classID: 114
+    packedSize: 2396
+    offset: 2339496
+    sourceAssetGUID: 60172691891ec18429dcd1233b322c0b
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/be9d7fd7a93d6ec498386bf2c989b83f.asset
+  - fileID: 41
+    classID: 114
+    packedSize: 1716
+    offset: 2341896
+    sourceAssetGUID: 3386141c0df1c9c47a1549c9a0cc5a44
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/c8df303ceb45ae84f85a11591f741734.asset
+  - fileID: 42
+    classID: 114
+    packedSize: 1424
+    offset: 2343616
+    sourceAssetGUID: d8699a02508784d4fa8b36be4fe33b69
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/d8531be40ebbd4f49b1373dc92ac1f17.asset
+  - fileID: 43
+    classID: 114
+    packedSize: 3364
+    offset: 2345040
+    sourceAssetGUID: 3c675bc40b4332043a73f3921e687ac4
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/dbe7fb5535cf16e4cb5fc9e3f477ab86.asset
+  - fileID: 44
+    classID: 114
+    packedSize: 1156
+    offset: 2348408
+    sourceAssetGUID: 2e498d1c8094910479dc3e1b768306a4
+    buildTimeAssetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+      SDF - Fallback.asset
+  - fileID: 45
+    classID: 114
+    packedSize: 28764
+    offset: 2349568
+    sourceAssetGUID: 8f586378b4e144a9851e7b34d9b748ee
+    buildTimeAssetPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+      SDF.asset
+  - fileID: 46
+    classID: 114
+    packedSize: 1428
+    offset: 2378336
+    sourceAssetGUID: 3821e8d1473f03d4caa135faac4785d7
+    buildTimeAssetPath: Assets/UdonSharp/PrefabBuild/Assets/Prefabs/BaseCube.prefab
+--- !u!382020655 &7087345593484431073
+PluginBuildInfo:
+  m_RuntimePlugins:
+  - VRC.Udon.VM
+  - VRC.SDK3.Dynamics.PhysBone
+  - VRC.Udon.Security
+  - libvrc_fast_crypto
+  - VRCEconomy
+  - libvrc_image_loader
+  - YamlDotNet
+  - VRCSDK3
+  - nunit.framework
+  - VRCCore-Editor
+  - Serilog.Sinks.File
+  - vrc_fast_crypto
+  - VRC.SDK3.Dynamics.Contact
+  - System.Collections.Immutable
+  - OculusXRPlugin
+  - VRC.Udon.Wrapper
+  - vrc_image_loader
+  - Unity.Burst.Unsafe
+  - SemanticVersioning
+  - librsync.net
+  - OVRPlugin
+  - System.Runtime.CompilerServices.Unsafe
+  - Newtonsoft.Json
+  - Unity.Collections.LowLevel.ILSupport
+  - VRC.Udon.Common
+  - VRC.Udon.VRCWrapperModules
+  - VRC.Dynamics
+  - VRCSDKBase
+  - VRC.Utility
+  - portmidi
+  - VRC.Udon.ClientBindings
+  - SDKBase-Legacy
+  - Blake2Sharp
+  - VRC.SDK3.Dynamics.Constraint
+  - System.Text.Encoding.CodePages
+  - Serilog
+  - Collections.Pooled
+  - AudioPluginOculusSpatializer
+  m_EditorPlugins:
+  - VRC.Udon.VRCGraphModules
+  - VRC.Udon.EditorBindings
+  - 0Harmony
+  - VRC.SDK3.Dynamics.Contact.Editor
+  - libvrc_shader_compiler_plugin
+  - Mono.Cecil.Pdb
+  - JetBrains.Rider.PathLocator
+  - vrc_shader_compiler_plugin
+  - VRCSDKBase-Editor
+  - Microsoft.CodeAnalysis.CSharp
+  - VRC.Udon.VRCTypeResolverModules
+  - VRCEconomy-Editor
+  - ICSharpCode.SharpZipLib
+  - VRC.SDK3.Dynamics.Constraint.Editor
+  - AppleEventIntegration
+  - Mono.Cecil
+  - VRC.Udon.Graph
+  - Unity.Burst.Cecil.Pdb
+  - Mono.Cecil.Rocks
+  - Microsoft.CodeAnalysis
+  - VRC.Udon.Compiler
+  - System.Reflection.Metadata
+  - VRCSDK3-Editor
+  - Mono.Cecil.Mdb
+  - Serilog.Sinks.Unity3D
+  - Algolia.Search
+  - Unity.Burst.Cecil.Mdb
+  - VRC.SDK3.Dynamics.PhysBone.Editor
+  - Unity.Burst.Cecil
+  - Unity.Burst.Cecil.Rocks
+  - vpm-core-lib
+  - VRC.Udon.UAssembly

@@ -27,7 +27,7 @@ public class RespawnNet : UdonSharpBehaviour
 
         if(player.displayName == _manager.firstPlayerName)
         {
-            _manager.SpawnCube(_firstTransformSave.position, player);
+            //_manager.SpawnCube(_firstTransformSave.position, player);
         }
     }
 }

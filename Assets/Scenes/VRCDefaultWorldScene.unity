@@ -149,14 +149,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5395305}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.164196, y: 8.960066, z: -25.326345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 405098694}
   - {fileID: 2094555145}
-  m_Father: {fileID: 43519694}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &43519693
 GameObject:
@@ -184,13 +184,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43519693}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.164196, y: 8.960066, z: -25.326345}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5395306}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 405098694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &43519695
 MonoBehaviour:
@@ -250,6 +249,7 @@ MonoBehaviour:
   - {fileID: 0}
   firstPlayerName: 
   _highscoreBoard: {fileID: 1313814643}
+  _spawnOffset: 1
 --- !u!1 &214286785
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,10 +421,11 @@ Transform:
   m_GameObject: {fileID: 405098693}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.19738, y: -8.990066, z: 26.919294}
+  m_LocalPosition: {x: -24.19738, y: -9.46, z: 26.919294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 43519694}
   m_Father: {fileID: 5395306}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &617277649
@@ -1572,16 +1573,15 @@ MonoBehaviour:
   RenderReflectionIntensity: 0
   RenderSkybox: {fileID: 0}
   NetworkIDs:
-  - gameObject: {fileID: 2094555140}
+  - gameObject: {fileID: 1313814640}
     ID: 10
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 3480278762663670689}
+  - gameObject: {fileID: 43519693}
     ID: 11
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
-    - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 43519693}
+  - gameObject: {fileID: 2094555140}
     ID: 12
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
@@ -1589,9 +1589,10 @@ MonoBehaviour:
     ID: 13
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 1313814640}
+  - gameObject: {fileID: 3480278762663670689}
     ID: 14
     SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
     - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
@@ -1711,6 +1712,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5395306}
     m_Modifications:
+    - target: {fileID: 865012404847567245, guid: b190c63cb0f32d94ab181c0b6c6863e0,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1140502385012322876, guid: b190c63cb0f32d94ab181c0b6c6863e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1773,6 +1779,12 @@ PrefabInstance:
       objectReference: {fileID: 43519696}
     - target: {fileID: 6207580622863348831, guid: b190c63cb0f32d94ab181c0b6c6863e0,
         type: 3}
+      propertyPath: _cubePrefab
+      value: 
+      objectReference: {fileID: 3863850438802821179, guid: b190c63cb0f32d94ab181c0b6c6863e0,
+        type: 3}
+    - target: {fileID: 6207580622863348831, guid: b190c63cb0f32d94ab181c0b6c6863e0,
+        type: 3}
       propertyPath: platformsManager
       value: 
       objectReference: {fileID: 43519696}
@@ -1796,6 +1808,6 @@ SceneRoots:
   - {fileID: 1787983411}
   - {fileID: 7606902903243430487}
   - {fileID: 358170790}
-  - {fileID: 43519694}
+  - {fileID: 5395306}
   - {fileID: 1017169206}
   - {fileID: 1313814641}
