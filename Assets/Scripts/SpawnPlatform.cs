@@ -17,7 +17,7 @@ public class SpawnPlatform : UdonSharpBehaviour
     public void NextPlatform()
     {
         platformsManager.SpawnCube();
-        platformsManager.StartCoroutineSimulation();
+        platformsManager.StartPlatformSpawning();
         _hasSpawned = true;
     }
 
