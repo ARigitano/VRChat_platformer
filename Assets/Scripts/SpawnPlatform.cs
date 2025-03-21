@@ -21,6 +21,16 @@ public class SpawnPlatform : UdonSharpBehaviour
         _hasSpawned = true;
     }
 
+    public void ResetActivate()
+    {
+        SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "Reset");
+    }
+
+    public void Reset()
+    {
+        _hasSpawned = false;
+    }
+
     public override void OnPlayerTriggerEnter(VRCPlayerApi player)
     {
         base.OnPlayerTriggerEnter(player);

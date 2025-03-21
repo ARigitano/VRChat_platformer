@@ -8,6 +8,8 @@ public class PlatformsManager : UdonSharpBehaviour
 {
     [SerializeField]
     private GameObject _cubePrefab; //Prefab for a platform.
+    [SerializeField]
+    private SpawnPlatform _baseCube; //Script of the cube that starts the spawning.
     
 
     [SerializeField]
@@ -20,6 +22,10 @@ public class PlatformsManager : UdonSharpBehaviour
     private float _randX; //X coordinate for platform spawning.
     private float _randY; //Y coordinate for platform spawning.
     private float _randZ; //Z coordinate for platform spawning.
+
+    [SerializeField]
+    private int _nbPlatformsToSpawn = 6; //Number of platforms to spawn
+    private int _nbPlatformsSpawned = 0; //Number of platforms spawned.
 
     private void Start()
     {
@@ -42,8 +48,18 @@ public class PlatformsManager : UdonSharpBehaviour
 
             if (_timer <= 0f)
             {
-                SpawnPlatform();
-                _timer = _interval;
+                if (_nbPlatformsSpawned <= _nbPlatformsToSpawn)
+                {
+                    SpawnPlatform();
+                    _timer = _interval;
+                    _nbPlatformsSpawned++;
+                }
+                else
+                {
+                    _nbPlatformsSpawned = 0;
+                    _isRunning = false;
+                    _baseCube.ResetActivate();
+                }
             }
         }
     }
@@ -64,6 +80,6 @@ public class PlatformsManager : UdonSharpBehaviour
         Vector3 spawnPosition = new Vector3(_randX, _randY, _randZ);
 
         GameObject cube = (GameObject)Instantiate(_cubePrefab, spawnPosition, Quaternion.identity);
-        Destroy(cube, 3f);
+        Destroy(cube, 10f);
     }
 }
