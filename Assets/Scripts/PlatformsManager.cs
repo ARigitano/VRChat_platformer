@@ -4,6 +4,7 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
+//Not synched over the network : to fix
 public class PlatformsManager : UdonSharpBehaviour
 {
     [SerializeField]
@@ -27,7 +28,7 @@ public class PlatformsManager : UdonSharpBehaviour
     private int _nbPlatformsToSpawn = 6; //Number of platforms to spawn
     private int _nbPlatformsSpawned = 0; //Number of platforms spawned.
 
-    private void Start()
+    private void Reset()
     {
         _randX = transform.position.x;
         _randY = transform.position.y;
@@ -37,6 +38,7 @@ public class PlatformsManager : UdonSharpBehaviour
     //Starts spawning platforms.
     public void StartPlatformSpawning()
     {
+        Reset();
         _isRunning = true;
     }
 
